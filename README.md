@@ -1,83 +1,49 @@
-# JSON Server Template
+# Mixology Buddy JSON Server
+
+This JSON server is meant to be the back-end of the [Mixology Buddy](https://github.com/tred237/mixology-buddy) React app
 
 ## Setup
 
-Fork and clone this repo. Then install the dependencies by running:
+1. In Github, fork this repository.
 
-```sh
+![image](https://user-images.githubusercontent.com/103388556/189546584-8ec5fef7-4d7d-4c47-ae6b-f6e6ae834a69.png)
+
+![image](https://user-images.githubusercontent.com/103388556/189546761-f0f05411-1967-46c7-b081-063bc6951ae0.png)
+
+2. Copy the SSH key from the forked repository.
+
+![image](https://user-images.githubusercontent.com/103388556/189546817-4d32dcbb-e79e-4220-8fc2-c573d21e9cc1.png)
+  
+3. In your terminal, clone the repository using the SSH key you copied from the fork.
+```
+git clone <pasted-ssh-key>
+```
+  
+4. Navigate to the root of the cloned repository and install dependancie  
+```
+cd json-server-template
 npm install
 ```
 
-## Seeding Data
-
-To set up your database, update the `db/seeds.json` file to contain an object
-with a key pointing to an array of data, like this:
-
-```json
-{
-  "toys": [
-    {
-      "id": 1,
-      "name": "Woody",
-      "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 8
-    },
-    {
-      "id": 2,
-      "name": "Buzz Lightyear",
-      "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 14
-    }
-  ]
-}
+## Usage
+1. In your terminal, navigate to the root of your back-end directory and copy data from the `db/seeds.json` file to the
+`db/db.json` file.
+```
+cd json-server-template
+npm run seed
 ```
 
-Then, run `npm run seed` to copy data from the `db/seeds.json` file to the
-`db/db.json` file. `json-server` uses the `db.json` file to create your RESTful
-API, so make sure your `db.json` file is always up to date!
+Note: You can run `npm run seed` if you ever want to overwrite `db.json` to reflect the default seed.
 
-Any time you want to reset your database back to your original data, run
-`npm run seed` again. Doing this will overwrite all the data in your `db.json`
-file, so make sure you don't have any data in that file that you don't mind
-losing!
+2. Launch your JSON server in development mode. The output should confirm that the server has started and will provide you with the localhost URL and port that the sever is running on.
+ ```
+ npm run dev
+ ```
 
-## Running the Server Locally
+<img width="337" alt="image" src="https://user-images.githubusercontent.com/103388556/200965932-85812984-3c84-4534-b01e-c34474cbf05a.png">
 
-To run your server in development mode, run:
+3. Once you know your JSON server is running, you are able to start your front-end. You can find the Usage instructions for this [here](https://github.com/tred237/mixology-buddy).
 
-```sh
-npm run dev
-```
+## License/API
 
-While running in development mode, the server will re-load any time you make
-changes to the `db.json` file, so you can test our your seed data.
-
-While your server is running, you can make requests to
-[http://localhost:3000](http://localhost:3000). Check it out in the browser to
-make sure your server works!
-
-## Deploying the Server
-
-Free services like Heroku make it simple to deploy your Node server. Heroku also
-works nicely with Rails, which you'll learn later in the program.
-
-First, download the [Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up).
-
-Then, [deploy your app](https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app).
-
-Since Heroku deployment integrates with your git repo, you can easily deploy
-changes to your database. To deploy changes, make sure to commit your code:
-
-```sh
-git add .
-git commit -m "Updated database"
-```
-
-Then push your main/default branch up to Heroku:
-
-```sh
-git push heroku main
-```
-
-## Sources
-[TheCocktailDB](https://www.thecocktaildb.com/api.php?ref=apilist.fun)
+All of the data was pulled from the [TheCocktailDB API](https://www.thecocktaildb.com/api.php?ref=apilist.fun)
