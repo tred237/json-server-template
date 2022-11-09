@@ -33,7 +33,7 @@ cd json-server-template
 npm run seed
 ```
 
-Note: You can run `npm run seed` if you ever want to overwrite `db.json` to reflect the default seed.
+Note: You can run `npm run seed` if you ever want to overwrite `db.json` with the original data.
 
 2. Launch your JSON server in development mode. The output should confirm that the server has started and will provide you with the localhost URL and port that the sever is running on.
  ```
