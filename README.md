@@ -19,7 +19,7 @@ This JSON server is meant to be the back-end of the [Mixology Buddy](https://git
 git clone <pasted-ssh-key>
 ```
   
-4. Navigate to the root of the cloned repository and install dependancie  
+4. Navigate to the root of the cloned repository and install dependancies 
 ```
 cd json-server-template
 npm install
