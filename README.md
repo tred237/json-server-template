@@ -42,7 +42,7 @@ Note: You can run `npm run seed` if you ever want to overwrite `db.json` with th
 
 <img width="337" alt="image" src="https://user-images.githubusercontent.com/103388556/200965932-85812984-3c84-4534-b01e-c34474cbf05a.png">
 
-3. Once you know your JSON server is running, you are able to start your front-end. You can find the Usage instructions for this [here](https://github.com/tred237/mixology-buddy).
+3. Once you know your JSON server is running, you are able to start your front-end. You can find instructions to do this starting on Step 2 in Usage sections, [here](https://github.com/tred237/mixology-buddy).
 
 ## License/API
 
